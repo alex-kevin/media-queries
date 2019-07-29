@@ -1,33 +1,20 @@
 * {
 	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
-
 	width: 900px;
 	margin: auto;
 	display: grid;
-	grid-template-rows: 100px 400px 400px 100px;
-	grid-template-columns: 60% 40%;
+	grid-template-rows: 120px 400px 400px 100px;
+	grid-template-columns: 6fr 4fr;
 }
 
-
-nav {
-	grid-area: 1 / 2 / 2 / 3;
-	height: 100%;
-}
-
-.nav-links {
-	list-style: none;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-}
-
-ul > li {
-	/*border: 1px solid black;*/
-	display: inline-block;
-	padding: 1em;
+footer {
+	grid-area: 4 / 1 / 5 / 3;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
 }
 
 h1 {
@@ -35,12 +22,29 @@ h1 {
 	font-size: 35pt;
 }
 
-.header-img {
-	grid-area: 2 / 1 / 3 / 3;
-	width: 100%;
+nav {
+	grid-area: 1 / 2 / 2 / 3;
+	height: 100%;
 }
 
-.header-img>img {
+.nav-links {
+	height: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+ul > li {
+	display: inline-block;
+	padding: 1em;
+}
+
+.header-img {
+	grid-area: 2 / 1 / 3 / 3;
+}
+
+.header-img > img {
 	width: 100%;
 }
 
@@ -52,33 +56,32 @@ h1 {
 	grid-area: 3 / 2 / 4 / 3;
 }
 
-footer {
-	grid-area: 4 / 1 / 5 / 3;
-	display: grid;
-	grid-template-rows: 50% 50%;
-}
-
 .hidden-on-desktop {
 	display: none;
 }
 
-#social-media-links{
+#social-media-links {
 	grid-column: 2 / 3;
 	display: flex;
 	justify-content: flex-end;
 	font-size: 30px;
 }
-@media screen and (max-width:350px) {
 
-	body{
+i {
+	color: black;
+	margin: .1em;
+}
+
+@media screen and (max-width: 400px) {
+
+	body {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		padding: 1em;
 	}
 
-	.hidden-on-desktop
-	{
+	.hidden-on-desktop {
 		display: block;
 		background-color: #ccffff;
 		width: 100%;
@@ -88,34 +91,28 @@ footer {
 		padding: .2em;
 	}
 
-
-	.hidden-on-desktop>a
-	{
+	.hidden-on-desktop > a {
 		text-decoration: none;
 	}
 
-	.nav-links
-	{
+	.nav-links {
 		align-items: center;
 		flex-direction: column;
 		text-align: center;
 		padding-left: 0;
 	}
 
-	ul>li
-	{
+	ul > li {
 		width: 100%;
 		background: #cccccc;
 		margin: .5em;
 	}
 
-	h1
-	{
+	h1 {
 		text-align: center;
 	}
 
-	footer
-	{
+	footer {
 		margin-top: 2em;
 	}
 
