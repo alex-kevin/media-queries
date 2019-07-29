@@ -52,19 +52,22 @@ h1 {
 	grid-area: 3 / 2 / 4 / 3;
 }
 
-#social-media-links {
-	grid-area: 4 / 2 / 5 / 3;
-}
-
-footer>p {
-	grid-area: 4 / 1 / 5 / 2;
-
+footer {
+	grid-area: 4 / 1 / 5 / 3;
+	display: grid;
+	grid-template-rows: 50% 50%;
 }
 
 .hidden-on-desktop {
 	display: none;
 }
 
+#social-media-links{
+	grid-column: 2 / 3;
+	display: flex;
+	justify-content: flex-end;
+	font-size: 30px;
+}
 @media screen and (max-width:350px) {
 
 	body{
